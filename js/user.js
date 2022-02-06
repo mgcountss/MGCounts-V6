@@ -1,10 +1,7 @@
 let config = {
-    "name": "YouTube EST",
+    "name": "YouTube",
     "bottom": "Subscribers",
     "sideCounts": 3,
-    "change": "User",
-    "force": "Channel ID",
-    "search": "Searchterm",
     "background": localStorage.getItem('background') || "#141414",
     "backgroundCounter": localStorage.getItem('backgroundCounter') || "#1a1a1a",
     "mainCount": localStorage.getItem('mainCount') || "#FFFFFF",
@@ -13,10 +10,8 @@ let config = {
     "odometerDownColor": localStorage.getItem('odometerDownColor') || "#FFFFFF",
     "odometerSpeed": localStorage.getItem('odometerSpeed') || "1.5",
     "graphColor": localStorage.getItem('graphColor') || "#FFFFFF",
-    "graphBColor": localStorage.getItem('graphBColor') || "",
-    "GainsBColor": localStorage.getItem('GainsBColor') || "",
+    "graphLength": localStorage.getItem('graphLength') || "1500",
     "graphType": localStorage.getItem('graphType') || "line",
-    "GainsColor": localStorage.getItem('GainsColor') || "#FFFFFF",
     "bookmark1": localStorage.getItem('bookmark1') || "YouTube/user",
     "bookmark2": localStorage.getItem('bookmark2') || "YouTube/user-est",
     "bookmark3": localStorage.getItem('bookmark3') || "StoryFire/user",
@@ -25,13 +20,13 @@ let config = {
 }
 let params = new URLSearchParams(document.location.search.substring(1));
 let url = new URL(window.location.href);
-let id = "UCSgk1g0AZi9_759yfz-iIHg";
+let id = "UCX6OQ3DkcsbYNE6H8uQQuVA";
 let last = []
 if (url.searchParams.get('id')) {
     id = params.get("id");
 }
 function load() {
-    document.getElementById('embed').value = "https://mgcounts.com/embeds/youtube/user?id="+id+""
+    document.getElementById('embed').value = "https://v6.mgcounts.com/embeds/youtube/user?id="+id+""
     document.title = config.name
     document.body.style.backgroundColor = config.background
     document.getElementById('mainCount').style.backgroundColor = config.backgroundCounter
@@ -70,27 +65,10 @@ function fetcher() {
         .then(response => response.json())
         .then(data => {
             document.getElementById('count').innerHTML = data.main
-            let to = parseFloat(data.main) - parseFloat(lastest)
-            if (isNaN(parseFloat(to))) {
-                console.log("Error: NaN")
-            }else{
-                last.push(to)             
-            }
-            if (last.length > 8) {
-                last.shift()
-            }
-            for (let q = 0; q < last.length; q++) {
-                let a = q + 1
-                if (last[q] > 0) {
-                    document.getElementById('h' + a + '').innerHTML = "+" + last[q].toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + ""
-                } else {
-                    document.getElementById('h' + a + '').innerHTML = last[q].toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-                }
-            }
             lastest = parseFloat(data.main)
             document.getElementById('name').innerHTML = data.name
             document.getElementById('img').src = data.image
-            if (chart.series[0].points.length == 1500) chart.series[0].data[0].remove();
+            if (chart.series[0].points.length == config.graphLength) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(), Math.floor(data.main)])
             if (data.banner == null) {
                 document.getElementById('banner').src = data.image
@@ -124,10 +102,20 @@ let chart = new Highcharts.chart({
     credits: {
         enabled: false,
     }, xAxis: {
+        type: 'datetime',
         visible: false
     },
     yAxis: {
         visible: false,
+    },
+    plotOptions: {
+        series: {
+            threshold: null,
+            fillOpacity: 0.25
+        },
+        area: {
+            fillOpacity: 0.25
+        }
     },
     series: [{
         showInLegend: false,
@@ -148,18 +136,10 @@ function load2() {
     document.getElementById('DownColor').value = config.odometerDownColor
     document.getElementById('speed').value = config.odometerSpeed
     document.getElementById('graphColor').value = config.graphColor
-    document.getElementById('chart').style.backgroundColor = config.graphBColor
-    document.getElementById('list').style.backgroundColor = config.GainsBColor
-    for (let q = 1; q < 9; q++) {
-        document.getElementById('h' + q + '').style.color = config.GainsColor
-    }
+    document.getElementById('graphLength').value = config.graphLength
     document.getElementById('count').style.color = config.mainCount
     document.getElementById('name').style.color = config.mainCount
     document.getElementById('f').style.color = config.mainCount
-    for (let q = 1; q < config.sideCounts + 1; q++) {
-        document.getElementById('name_' + q + '').style.color = config.sideCountsColor
-        document.getElementById('count_' + q + '').style.color = config.sideCountsColor
-    }
     document.querySelectorAll("style").forEach(e => {
         e.innerHTML += `.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
         .odometer.odometer-theme-minimal.odometer-animating-up .odometer-ribbon-inner {
@@ -195,6 +175,10 @@ function load2() {
             transform: translateY(0);
           }`
     })
+    for (let q = 1; q < config.sideCounts + 1; q++) {
+        document.getElementById('name_' + q + '').style.color = config.sideCountsColor
+        document.getElementById('count_' + q + '').style.color = config.sideCountsColor
+    }
     document.body.style.backgroundColor = config.background
     document.getElementById('mainCount').style.backgroundColor = config.backgroundCounter
     chart = new Highcharts.chart({
@@ -211,10 +195,20 @@ function load2() {
         credits: {
             enabled: false,
         }, xAxis: {
+            type: 'datetime',
             visible: false
         },
         yAxis: {
             visible: false,
+        },
+        plotOptions: {
+            series: {
+                threshold: null,
+                fillOpacity: 0.25
+            },
+            area: {
+                fillOpacity: 0.25
+            }
         },
         series: [{
             showInLegend: false,
@@ -237,9 +231,7 @@ function load3() {
     localStorage.setItem('odometerDownColor', document.getElementById('DownColor').value)
     localStorage.setItem('odometerSpeed', document.getElementById('speed').value)
     localStorage.setItem('graphColor', document.getElementById('graphColor').value)
-    localStorage.setItem('graphBColor', document.getElementById('graphBColor').value)
-    localStorage.setItem('GainsBColor', document.getElementById('GainsBColor').value)
-    localStorage.setItem('GainsColor', document.getElementById('GainsColor').value)
+    localStorage.setItem('graphLength', document.getElementById('graphLength').value)
     localStorage.setItem('graphType', document.getElementById('graphType').value)
     config.background = document.getElementById('BColor').value
     config.backgroundCounter = document.getElementById('CounterBColor').value
@@ -249,15 +241,13 @@ function load3() {
     config.odometerDownColor = document.getElementById('DownColor').value
     config.odometerSpeed = document.getElementById('speed').value
     config.graphColor = document.getElementById('graphColor').value
-    config.graphBColor = document.getElementById('graphBColor').value
-    config.GainsBColor = document.getElementById('GainsBColor').value
-    config.GainsColor = document.getElementById('GainsColor').value
+    config.graphLength = document.getElementById('graphLength').value
     config.graphType = document.getElementById('graphType').value
     load2()
 }
 
 function reset() {
-    if (confirm("Are you sure you want to reset these settings?") == true) {
+    if (confirm("Are you sure you want to reset these settings? (This will also reset all bookmarks.)") == true) {
         localStorage.clear()
         window.location.href = window.location.href;
     }
@@ -309,6 +299,24 @@ function bookmarks() {
     for (let q = 1; q < 6; q++) {
      document.getElementById('bookmark'+q+'').href = localStorage.getItem('Bookmark '+q+'') || "https://mgcounts.com/bookmarks"
     }
+}
+
+function search() {
+    fetch('https://backend.mgcounts.com/youtube/user/search/' + document.getElementById('search').value + '')
+    .then(response => response.json())
+    .then(data => {
+document.getElementById('name1').title = data.id1
+document.getElementById('img1').src = data.img1
+document.getElementById('name1').innerHTML = data.name1
+
+document.getElementById('name2').title = data.id2
+document.getElementById('img2').src = data.img2
+document.getElementById('name2').innerHTML = data.name2
+
+document.getElementById('name3').title = data.id3
+document.getElementById('img3').src = data.img3
+document.getElementById('name3').innerHTML = data.name3
+})
 }
 
 fetcher()

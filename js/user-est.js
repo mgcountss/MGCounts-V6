@@ -26,7 +26,7 @@ if (url.searchParams.get('id')) {
     id = params.get("id");
 }
 function load() {
-    document.getElementById('embed').value = "https://mgcounts.com/embeds/youtube/user-est?id="+id+""
+    document.getElementById('embed').value = "https://v6.mgcounts.com/embeds/youtube/user-est?id="+id+""
     document.title = config.name
     document.body.style.backgroundColor = config.background
     document.getElementById('mainCount').style.backgroundColor = config.backgroundCounter
@@ -65,7 +65,6 @@ function fetcher() {
         .then(response => response.json())
         .then(data => {
             document.getElementById('count').innerHTML = data.main
-            let to = parseFloat(data.main) - parseFloat(lastest)
             lastest = parseFloat(data.main)
             document.getElementById('name').innerHTML = data.name
             document.getElementById('img').src = data.image
@@ -296,11 +295,28 @@ function set() {
     }
 }
 
-
 function bookmarks() {
     for (let q = 1; q < 6; q++) {
      document.getElementById('bookmark'+q+'').href = localStorage.getItem('Bookmark '+q+'') || "https://mgcounts.com/bookmarks"
     }
+}
+
+function search() {
+    fetch('https://backend.mgcounts.com/youtube/user/search/' + document.getElementById('search').value + '')
+    .then(response => response.json())
+    .then(data => {
+document.getElementById('name1').title = data.id1
+document.getElementById('img1').src = data.img1
+document.getElementById('name1').innerHTML = data.name1
+
+document.getElementById('name2').title = data.id2
+document.getElementById('img2').src = data.img2
+document.getElementById('name2').innerHTML = data.name2
+
+document.getElementById('name3').title = data.id3
+document.getElementById('img3').src = data.img3
+document.getElementById('name3').innerHTML = data.name3
+})
 }
 
 fetcher()
