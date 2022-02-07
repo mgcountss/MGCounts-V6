@@ -1,7 +1,7 @@
 let config = {
     "name": "YouTube",
     "bottom": "Likes",
-    "sideCounts": 3,
+    "sideCounts": 2,
     "background": localStorage.getItem('background') || "#141414",
     "backgroundCounter": localStorage.getItem('backgroundCounter') || "#1a1a1a",
     "mainCount": localStorage.getItem('mainCount') || "#FFFFFF",
@@ -61,7 +61,7 @@ function random(min, max) {
 
 let lastest = 0;
 function fetcher() {
-    fetch('https://backend.mgcounts.com/youtube/user/' + id + '')
+    fetch('https://backend.mgcounts.com/youtube/comments/' + id + '')
         .then(response => response.json())
         .then(data => {
             document.getElementById('count').innerHTML = data.main

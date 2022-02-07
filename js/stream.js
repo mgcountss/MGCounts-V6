@@ -20,13 +20,13 @@ let config = {
 }
 let params = new URLSearchParams(document.location.search.substring(1));
 let url = new URL(window.location.href);
-let id = "jt4LTL8O2eo";
+let id = "5qap5aO4i9A";
 let last = []
 if (url.searchParams.get('id')) {
     id = params.get("id");
 }
 function load() {
-    document.getElementById('embed').value = "https://v6.mgcounts.com/embeds/youtube/videos?id="+id+""
+    document.getElementById('embed').value = "https://v6.mgcounts.com/embeds/youtube/stream?id="+id+""
     document.title = config.name
     document.body.style.backgroundColor = config.background
     document.getElementById('mainCount').style.backgroundColor = config.backgroundCounter

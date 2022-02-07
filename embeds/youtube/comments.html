@@ -15,7 +15,7 @@
         document.getElementById('h1').style.color = "#FFF"
     }
     function fetcher() {
-        fetch('https://backend.mgcounts.com/youtube/user/' + id + '')
+        fetch('https://backend.mgcounts.com/youtube/comments/' + id + '')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('h1').innerHTML = data.main

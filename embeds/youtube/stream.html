@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="../../css/odometer.css">
 <style></style>
 <div>
-    <img id="img" src="../../images/Old-YT.png" style="float: left; border-radius: 50%; height: 100px;">
+    <img id="img" src="../../images/Old-YT.png" style="float: left; border-radius: 15px; height: 100px; width: 175px;">
     <h2 id="h2" style="font-family: 'Roboto', sans-serif; font-size: 35px; margin-top: 0px;">Loading</h2>
     <h1 id="h1" class="odometer" style="font-family: 'Roboto', sans-serif; font-size: 55px; margin-top: -35px;">0</h1>
 </div>
@@ -15,7 +15,7 @@
         document.getElementById('h1').style.color = "#FFF"
     }
     function fetcher() {
-        fetch('https://backend.mgcounts.com/youtube/user/' + id + '')
+        fetch('https://backend.mgcounts.com/youtube/streams/' + id + '')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('h1').innerHTML = data.main
