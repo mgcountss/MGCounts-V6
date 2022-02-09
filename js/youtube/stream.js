@@ -297,7 +297,7 @@ function set() {
 
 function bookmarks() {
     for (let q = 1; q < 6; q++) {
-     document.getElementById('bookmark'+q+'').href = localStorage.getItem('Bookmark '+q+'') || "https://mgcounts.com/bookmarks"
+     document.getElementById('bookmark'+q+'').href = localStorage.getItem('Bookmark '+q+'') || "https://v6.mgcounts.com/bookmarks"
     }
 }
 
