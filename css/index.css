@@ -1,0 +1,25 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+h2 {
+    font-size: 50px;
+    margin-top: 0px;
+}
+#title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 125px;
+    margin-top: 0px;
+    background-image: linear-gradient(to right, red, rgb(255, 0, 255), pink, pink, rgb(255, 0, 255), red);;
+}
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    margin-top: -25px;
+}
+.grid-item {
+    border: solid #000;
+}
+.items {
+    margin-top: -30px;
+}

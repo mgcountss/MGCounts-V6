@@ -15,7 +15,7 @@
             <li><a class="btn" style="color: White;" href="/contact">Contact</a></li>
             <li><a class="btn" style="color: White;" href="/developers">Developers</a></li>
             <button style="margin-top: 5px;"><a class="btn" style="color: black;" type="button" class="btn btn-light btn-block" data-toggle="modal"
-                    data-target="#exampleModalCenter">Change Channel</a></button>
+                    data-target="#exampleModalCenter">Change Stream</a></button>
         </ul>
         <ul class="nav navbar-nav">
             <li><a href="/" class="bookmark" id="bookmark1">Bookmark 1</a></li>
@@ -35,8 +35,8 @@
         <div class="banner" id="banner2">
             <img id="banner">
         </div>
-        <img class="img" id="img" src=".././images/Old-YT.png">
-        <h2 id="name">Loading</h2>
+        <img class="img" id="img" style="border-radius: 15px; width: 200px;" src=".././images/Old-YT.png">
+        <h2 id="name" style="font-size: 2.5vw">Loading</h2>
         <h1 id="count" class="odometer">0</h1>
         <h2 class="f" id="f"></h2>
         <center>
@@ -108,19 +108,19 @@
             <div class="modal-body">
             </div>
             <center>
-                <h1 style="color: white; margin-top: -25px;">Change Channel</h1>
+                <h1 style="color: white; margin-top: -25px;">Change Video</h1>
                 <br>
 
-                <h5 style="color: white;">Channel ID</h5>
+                <h5 style="color: white;">Username</h5>
                 <form id="FormThing" onsubmit="updatePageHmm()">
-                    <input type="text" placeholder="Channel ID" name="id" id="searchHmm">
+                    <input type="text" placeholder="Username" name="id" id="searchHmm">
                     <input type="submit" value="Count!">
                 </form>
                 <br>
                 <br>
                 <br>
                 <h5 style="color: white;">Search</h5>
-                <input type="text" placeholder="Search For Channel" id="search">
+                <input type="text" placeholder="Search For User" id="search">
 
                 <button onclick="search()">Search</button>
                 <br>
@@ -129,21 +129,21 @@
                 <br>
                 <div style="justify-content: space-between; text-align: center; display: flex; flex-direction: row;">
                     <div id="channel1"
-                        onclick="location.href = `https://v6.mgcounts.com/youtube/user-est?id=${document.getElementById('name1').title}`;"
+                        onclick="location.href = `https://v6.mgcounts.com/twitch/stream?id=${document.getElementById('name1').title}`;"
                         style="cursor: pointer;">
                         <img id="img1" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://v6.mgcounts.com/assets/img/Old-YT.png"
                             style="width: 80px;height: 80px; border-radius: 50%;"><br>
                         <span style="color: white;" id="name1" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
                     </div>
                     <div id="channel2"
-                        onclick="location.href = `https://v6.mgcounts.com/youtube/user-est?id=${document.getElementById('name2').title}`;"
+                        onclick="location.href = `https://v6.mgcounts.com/twitch/stream?id=${document.getElementById('name2').title}`;"
                         style="cursor: pointer;">
                         <img id="img2" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://v6.mgcounts.com/assets/img/Old-YT.png"
                             style="width: 80px;height: 80px; border-radius: 50%;"><br>
                         <span style="color: white;" id="name2" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
                     </div>
                     <div id="channel3"
-                        onclick="location.href = `https://v6.mgcounts.com/youtube/user-est?id=${document.getElementById('name3').title}`;"
+                        onclick="location.href = `https://v6.mgcounts.com/twitch/stream?id=${document.getElementById('name3').title}`;"
                         style="cursor: pointer;">
                         <img id="img3" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://v6.mgcounts.com/assets/img/Old-YT.png"
                             style="width: 80px;height: 80px; border-radius: 50%;"><br>
@@ -162,7 +162,7 @@
 <script src=".././js/jquery.js"></script>
 <script src=".././js/bootstrap.js"></script>
 <script src=".././js/highstock.js"></script>
-<script src=".././js/youtube/user-est.js"></script>
+<script src=".././js/twitch/stream.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177075755-1"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js"></script>
 <script>
