@@ -1,5 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #141414;
+    color: #FFF;
 }
 h2 {
     font-size: 50px;
@@ -10,16 +12,29 @@ h2 {
     font-size: 125px;
     margin-top: 0px;
     background-image: linear-gradient(to right, red, rgb(255, 0, 255), pink, pink, rgb(255, 0, 255), red);;
+    color: #FFF;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #000;
+    scale: 1.1;
 }
 #grid {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     text-align: center;
-    margin-top: -25px;
+    margin-top: -60px;
 }
 .grid-item {
-    border: solid #000;
+    border: solid #FFF;
 }
 .items {
     margin-top: -30px;
+}
+a {
+    text-decoration: none;
+    color: #FF0000;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+}
+h1:hover {
+    scale: 1.2;
 }
