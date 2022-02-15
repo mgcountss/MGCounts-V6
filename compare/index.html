@@ -1,8 +1,7 @@
-<link rel="stylesheet" href=".././css/base.css">
+<link rel="stylesheet" href=".././css/compare.css">
 <script src=".././js/odometer.js"></script>
 <link rel="stylesheet" href=".././css/odometer.css">
 <link rel="stylesheet" href=".././css/bootstrap.css">
-<link rel="icon" type="image/png" sizes="250x250" href="https://mgcounts.com/assets/img/MGCounts.png">
 
 <head>
     <style></style>
@@ -15,8 +14,6 @@
             <li><a class="btn" style="color: White;" href="/faq">FAQ</a></li>
             <li><a class="btn" style="color: White;" href="/contact">Contact</a></li>
             <li><a class="btn" style="color: White;" href="/developers">Developers</a></li>
-            <button style="margin-top: 5px;"><a class="btn" style="color: black;" type="button" class="btn btn-light btn-block" data-toggle="modal"
-                    data-target="#exampleModalCenter">Change Channel</a></button>
         </ul>
         <ul class="nav navbar-nav">
             <li><a href="/" class="bookmark" id="bookmark1">Bookmark 1</a></li>
@@ -32,25 +29,43 @@
     <div class="select" id="select"></div>
 </center>
 <center>
-    <div id="mainCount" class="counter card-wide">
-        <div class="banner" id="banner2">
-            <img id="banner">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
+        <div id="mainCount" class="counter card-wide">
+            <div class="banner" id="banner3">
+                <img id="banner">
+            </div>
+            <img class="img" id="img" src=".././images/Old-YT.png">
+            <h2 id="name">Loading</h2>
+            <h1 id="count" class="odometer">0</h1>
+            <h2 class="f" id="f"></h2>
+            <center>
+                <div class="chart card-mid" id="chart"></div>
+            </center>
         </div>
-        <img class="img" id="img" src=".././images/Old-YT.png">
-        <h2 id="name">Loading</h2>
-        <h1 id="count" class="odometer">0</h1>
-        <h2 class="f" id="f"></h2>
-        <center>
-            <div class="chart card-mid" id="chart"></div>
-        </center>
+        
+        <div id="mainCount2" class="counter card-wide">
+            <div class="banner" id="banner3">
+                <img id="banner2">
+            </div>
+            <img class="img" id="img2" src=".././images/Old-YT.png">
+            <h2 id="name2">Loading</h2>
+            <h1 id="count2" class="odometer">0</h1>
+            <h2 class="f" id="ff"></h2>
+            <center>
+                <div class="chart2 card-mid" id="chart2"></div>
+            </center>
+        </div>
+    </div>
 </center>
 
 <center>
-    <div class="sideCounters" id="sideCounters"></div>
+    <div class="gap" id="gap">
+        <h2>Difference:</h2>
+        <h1 class="odometer" id="difference">0</h1>
+    </div>
     <br>
     <br>
     <div class="other">
-        <input id="embed" readonly value="Loading" onclick="embed()">
         <br>
         <br>
         <br>
@@ -102,59 +117,6 @@
         </div>
     </div>
 </center>
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog" style="background-color: #292b2c;">
-        <div class="modal-header">
-            <div class="modal-body">
-            </div>
-            <center>
-                <h1 style="color: white; margin-top: -25px;">Change Channel</h1>
-                <br>
-
-                <h5 style="color: white;">Channel ID</h5>
-                <form id="FormThing" onsubmit="updatePageHmm()">
-                    <input type="text" placeholder="Channel ID" name="id" id="searchHmm">
-                    <input type="submit" value="Count!">
-                </form>
-                <br>
-                <br>
-                <br>
-                <h5 style="color: white;">Search</h5>
-                <input type="text" placeholder="Search For Channel" id="search">
-
-                <button onclick="search()">Search</button>
-                <br>
-                <h5 style="color: white;">Results:</h5>
-                <br>
-                <br>
-                <div style="justify-content: space-between; text-align: center; display: flex; flex-direction: row;">
-                    <div id="channel1"
-                        onclick="location.href = `https://v6.mgcounts.com/storyfire/user?id=${document.getElementById('name1').title}`;"
-                        style="cursor: pointer;">
-                        <img id="img1" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://v6.mgcounts.com/assets/img/Old-YT.png"
-                            style="width: 80px;height: 80px; border-radius: 50%;"><br>
-                        <span style="color: white;" id="name1" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
-                    </div>
-                    <div id="channel2"
-                        onclick="location.href = `https://v6.mgcounts.com/storyfire/user?id=${document.getElementById('name2').title}`;"
-                        style="cursor: pointer;">
-                        <img id="img2" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://v6.mgcounts.com/assets/img/Old-YT.png"
-                            style="width: 80px;height: 80px; border-radius: 50%;"><br>
-                        <span style="color: white;" id="name2" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
-                    </div>
-                    <div id="channel3"
-                        onclick="location.href = `https://v6.mgcounts.com/storyfire/user?id=${document.getElementById('name3').title}`;"
-                        style="cursor: pointer;">
-                        <img id="img3" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://v6.mgcounts.com/assets/img/Old-YT.png"
-                            style="width: 80px;height: 80px; border-radius: 50%;"><br>
-                        <span style="color: white;" id="name3" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
-                    </div>
-            </center>
-        </div>
-        <br>
-    </div>
-</div>
 
 <br>
 <div id="footer">
@@ -163,7 +125,7 @@
 <script src=".././js/jquery.js"></script>
 <script src=".././js/bootstrap.js"></script>
 <script src=".././js/highstock.js"></script>
-<script src=".././js/storyfire/user.js"></script>
+<script src=".././js/compare.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177075755-1"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js"></script>
 <script>

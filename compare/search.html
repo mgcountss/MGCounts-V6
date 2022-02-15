@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href=".././css/base.css">
+    <script src=".././js/odometer.js"></script>
+    <link rel="stylesheet" href=".././css/odometer.css">
+    <link rel="stylesheet" href=".././css/bootstrap.css">
+    <link rel="icon" type="image/png" sizes="250x250" href="https://mgcounts.com/assets/img/MGCounts.png">
+
+<body>
+    <style>
+        body {
+            background-color: #000000;
+        }
+
+        img {
+            padding: 5px;
+            border-radius: 50%;
+            border: 5px solid #000000;
+            background-color: #ffffff;
+        }
+
+        h1,
+        h2 {
+            color: #FFF
+        }
+    </style>
+    <center>
+        <div style="background-color: #222222; border: solid #FFFFFF; width: 90%;">
+            <div
+                style="width: 100%; background-color: #222222; height: 100%; display: inline-block; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                <div style="margin: 5px;" class="search1" id="div1">
+                    <h1>User 1</h1>
+                    <br>
+                    <select id="select1">
+                        <option value="null">Select Platform</option>
+                        <option value="youtube/user">YouTube API</option>
+                        <option value="youtube/user-est">YouTube EST</option>
+                        <option value="youtube/videos">YouTube View Count</option>
+                        <option value="discord/server">Discord Members</option>
+                        <option value="discord/mee6">MEE6 XP</option>
+                        <option value="gab/user">Gap Followers</option>
+                        <option value="gab/post">Gab Post Likes</option>
+                        <option value="globalClicker/v">Global Clicker</option>
+                        <option value="storyfire/user">StoryFire Followers</option>
+                        <option value="storyfire/videos">StoryFire Video Views</option>
+                        <option value="roblox/user">Roblox User Followers</option>
+                        <option value="roblox/groups">Roblox Group Members</option>
+                        <option value="roblox/games">Roblox Game Players</option>
+                        <option value="twitch/user">Twitch Followers</option>
+                        <option value="twitch/streams">Twitch Viewers</option>
+                        <option value="reddit/subreddit">SubReddit Member Count</option>
+                        <option value="mrbeast/teamseas">#TeamSeas Donation Count</option>
+                        <option value="mrbeast/teamtrees">#TeamTrees Donation Count</option>
+                    </select>
+                    <br>
+                    <br>
+                    <div id="query1">
+                        <input placeholder="Query" id="search1">
+                    </div>
+                    <br>
+                    <br>
+                    <button onclick="search1()">Search</button>
+                    <br>
+                    <br>
+                    <br>
+                    <img id="img1" style="width: 100px; height:100px;" src="https://mgcounts.com/assets/img/Old-YT.png">
+                    <h1 id="name1">Loading</h1>
+                    <br>
+                </div>
+                <div style="margin: 5px;" class="search2" id="div2">
+                    <h1>User 2</h1>
+                    <br>
+                    <select id="select2">
+                        <option value="null">Select Platform</option>
+                        <option value="youtube/user">YouTube API</option>
+                        <option value="youtube/user-est">YouTube EST</option>
+                        <option value="youtube/videos">YouTube View Count</option>
+                        <option value="discord/server">Discord Members</option>
+                        <option value="discord/mee6">MEE6 XP</option>
+                        <option value="gab/user">Gap Followers</option>
+                        <option value="gab/post">Gab Post Likes</option>
+                        <option value="globalClicker/v">Global Clicker</option>
+                        <option value="storyfire/user">StoryFire Followers</option>
+                        <option value="storyfire/videos">StoryFire Video Views</option>
+                        <option value="roblox/user">Roblox User Followers</option>
+                        <option value="roblox/groups">Roblox Group Members</option>
+                        <option value="roblox/games">Roblox Game Players</option>
+                        <option value="twitch/user">Twitch Followers</option>
+                        <option value="twitch/streams">Twitch Viewers</option>
+                        <option value="reddit/subreddit">SubReddit Member Count</option>
+                        <option value="mrbeast/teamseas">#TeamSeas Donation Count</option>
+                        <option value="mrbeast/teamtrees">#TeamTrees Donation Count</option>
+                    </select>
+                    <br>
+                    <br>
+                    <div id="query2">
+                        <input id="search2" placeholder="Query">
+                    </div>
+                    <br>
+                    <br>
+                    <button onclick="search2()">Search</button>
+                    <br>
+                    <br>
+                    <br>
+                    <img id="img2" style="width: 100px; height:100px;" src="https://mgcounts.com/assets/img/Old-YT.png">
+                    <h1 id="name2">Loading</h1>
+                    <br>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+            <button style="font-size: 50px;" onclick="start()">Compare!</button>
+            <div>
+            </div>
+    </center>
+</body>
+<script src="../js/search.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177075755-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-177075755-1');
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js"></script>
+<script>
+    var socket = io('https://backend.mgcounts.com?&urlPath=' + document.URL + '', { transports: ['websocket'] });
+</script>

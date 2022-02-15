@@ -2,6 +2,7 @@
 <script src=".././js/odometer.js"></script>
 <link rel="stylesheet" href=".././css/odometer.css">
 <link rel="stylesheet" href=".././css/bootstrap.css">
+<link rel="icon" type="image/png" sizes="250x250" href="https://mgcounts.com/assets/img/MGCounts.png">
 
 <head>
     <style></style>
@@ -131,7 +132,7 @@
 <script src=".././js/jquery.js"></script>
 <script src=".././js/bootstrap.js"></script>
 <script src=".././js/highstock.js"></script>
-<script src=".././js/discord/mee6.js"></script>
+<script src=".././js/discord/server.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177075755-1"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js"></script>
 <script>
@@ -140,5 +141,5 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-177075755-1');
-    var socket = io('https://api.mgcounts.com?&urlPath=' + document.URL + '', { transports: ['websocket'] });
+    var socket = io('https://backend.mgcounts.com?&urlPath=' + document.URL + '', { transports: ['websocket'] });
 </script>
