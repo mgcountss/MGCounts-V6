@@ -1,0 +1,29 @@
+<script src="../../js/odometer.js"></script>
+<link rel="stylesheet" href="../../css/odometer.css">
+<style></style>
+<div>
+    <img id="img" src="../../images/Old-YT.png" style="float: left; border-radius: 50%; height: 100px; width: 100px;">
+    <h2 id="h2" style="font-family: 'Roboto', sans-serif; font-size: 35px; margin-top: 0px;">Loading</h2>
+    <h1 id="h1" class="odometer" style="font-family: 'Roboto', sans-serif; font-size: 55px; margin-top: -35px;">0</h1>
+</div>
+<script>
+    let params = new URLSearchParams(document.location.search.substring(1));
+    let id = params.get("id");
+    let id2 = params.get("id2");
+    let theme = params.get("theme");
+    if (theme === "dark") {
+        document.getElementById('h2').style.color = "#FFF"
+        document.getElementById('h1').style.color = "#FFF"
+    }
+    function fetcher() {
+        fetch('https://backend.mgcounts.com/discord/mee6/' + id + '/' + id2)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('h1').innerHTML = data.main
+                document.getElementById('h2').innerHTML = data.name
+                document.getElementById('img').src = data.image
+            })
+    }
+    fetcher()
+    setInterval(fetcher, 5000)
+</script>
