@@ -73,7 +73,7 @@ function fetcher() {
             if (data.banner == null) {
                 document.getElementById('banner').src = data.image
             } else {
-                document.getElementById('banner').src = data.banner
+                document.getElementById('banner').src = data.banner.bannerExternalUrl
             }
             if (data.main < 10) return 10; let x1 = Math.floor(Math.log10(data.main)); let x2 = Math.ceil(data.main / 10 ** x1); let x3 = x2 * 10 ** x1; let goal = x3 - data.main;
             document.getElementById('count_1').innerHTML = goal
