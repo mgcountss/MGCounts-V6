@@ -574,6 +574,6 @@ function search2() {
 
 
 function start() {
-    var url = "https://v6.mgcounts.com/compare?" + url1 + "&" + url2 + ""
+    var url = "https://mgcounts.com/compare?" + url1 + "&" + url2 + ""
     window.location.href = url
 }

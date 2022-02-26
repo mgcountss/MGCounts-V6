@@ -26,7 +26,7 @@ if (url.searchParams.get('id')) {
     id = params.get("id");
 }
 function load() {
-    document.getElementById('embed').value = "https://v6.mgcounts.com/embeds/roblox/groups?id="+id+""
+    document.getElementById('embed').value = "https://mgcounts.com/embeds/roblox/groups?id="+id+""
     document.title = config.name
     document.body.style.backgroundColor = config.background
     document.getElementById('mainCount').style.backgroundColor = config.backgroundCounter
@@ -304,7 +304,7 @@ function set() {
 
 function bookmarks() {
     for (let q = 1; q < 6; q++) {
-     document.getElementById('bookmark'+q+'').href = localStorage.getItem('Bookmark '+q+'') || "https://v6.mgcounts.com/bookmarks"
+     document.getElementById('bookmark'+q+'').href = localStorage.getItem('Bookmark '+q+'') || "https://mgcounts.com/bookmarks"
     }
 }
 
