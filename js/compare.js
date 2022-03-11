@@ -47,6 +47,12 @@ if (url1 == "/mrbeast/teamtrees/true") {
 if (url2 == "/mrbeast/teamtrees/true") {
     url2 = "mrbeast/teamtrees"
 }
+if (url1 == "changeorg/changeorg") {
+    url1 = "changeorg/"
+}
+if (url2 == "changeorg/changeorg") {
+    url2 = "changeorg/"
+}
 let lastest = 0;
 function fetcher() {
     fetch('https://backend.mgcounts.com/' + url1 + '')
@@ -58,7 +64,9 @@ function fetcher() {
             document.getElementById('img').src = data.image
             if (chart.series[0].points.length == config.graphLength) chart.series[0].data[0].remove();
             chart.series[0].addPoint([Date.now(), Math.floor(data.main)])
-            if (data.banner == null) {
+            if (data.banner.bannerExternalUrl) {
+                document.getElementById('banner').src = data.banner.bannerExternalUrl
+            } else if (data.banner == ""){
                 document.getElementById('banner').src = data.image
             } else {
                 document.getElementById('banner').src = data.banner
@@ -73,7 +81,9 @@ function fetcher() {
                     document.getElementById('img2').src = data2.image
                     if (chart2.series[0].points.length == config.graphLength) chart2.series[0].data[0].remove();
                     chart2.series[0].addPoint([Date.now(), Math.floor(data2.main)])
-                    if (data2.banner == null) {
+                    if (data2.banner.bannerExternalUrl) {
+                        document.getElementById('banner2').src = data2.banner.bannerExternalUrl
+                    } else if (data2.banner == ""){
                         document.getElementById('banner2').src = data2.image
                     } else {
                         document.getElementById('banner2').src = data2.banner

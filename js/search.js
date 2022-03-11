@@ -412,7 +412,7 @@ function search1() {
         link = "/youtube/comments/"
     }
     if (document.getElementById('select1').value == 'youtube/streams') {
-        link = "/youtube/streams/"
+        link = "/videos/search/"
     }
     if (document.getElementById('select1').value == 'twitch/user') {
         link = "/twitch/user/"
@@ -451,7 +451,10 @@ function search1() {
         link = "/gab/post/"
     }
     if (document.getElementById('select1').value == 'reddit/user') {
-        link = "/reddit/user"
+        link = "/reddit/user/"
+    }
+    if (document.getElementById('select1').value == 'changeorg/changeorg') {
+        link = "/changeorg/"
     }
     if (document.getElementById('select1').value == 'reddit/subreddit') {
         link = "/reddit/subreddit/"
@@ -463,7 +466,6 @@ function search1() {
         link = "/discord/mee6/"
         value = document.getElementById('search1').value + "/" + document.getElementById('inputa').value
     }
-    console.log(value)
     fetch('https://backend.mgcounts.com' + link + '' + value + '')
         .then(response => response.json())
         .then(data => {
@@ -502,7 +504,7 @@ function search2() {
         link = "/youtube/comments/"
     }
     if (document.getElementById('select2').value == 'youtube/streams') {
-        link = "/youtube/streams/"
+        link = "/videos/search/"
     }
     if (document.getElementById('select2').value == 'twitch/user') {
         link = "/twitch/user/"
@@ -541,7 +543,10 @@ function search2() {
         link = "/gab/post/"
     }
     if (document.getElementById('select2').value == 'reddit/user') {
-        link = "/reddit/user"
+        link = "/reddit/user/"
+    }
+    if (document.getElementById('select2').value == 'changeorg/changeorg') {
+        link = "/changeorg/"
     }
     if (document.getElementById('select2').value == 'reddit/subreddit') {
         link = "/reddit/subreddit/"
