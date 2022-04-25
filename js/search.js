@@ -488,13 +488,14 @@ function search1() {
 function search2() {
     let link = ""
     let value = ""
+    console.log(document.getElementById('select2').value)
     if (document.getElementById('select2').value !== "mrbeast/teamtrees" && document.getElementById('select2').value !== "mrbeast/teamseas") {
         value = document.getElementById('search2').value
     }
     if (document.getElementById('select2').value == 'youtube/user-est') {
         link = "/youtube/user/search/"
     }
-    if (document.getElementById('select2').value == 'youtube/user-api') {
+    if (document.getElementById('select2').value == 'youtube/user') {
         link = "/youtube/user/search/"
     }
     if (document.getElementById('select2').value == 'youtube/videos') {
@@ -558,6 +559,7 @@ function search2() {
         link = "/discord/mee6/"
         value = document.getElementById('search2').value + "/" + document.getElementById('inputb').value
     }
+    console.log(link, value)
     fetch('https://backend.mgcounts.com' + link + '' + value + '')
         .then(response => response.json())
         .then(data => {

@@ -320,4 +320,4 @@ document.getElementById('name3').innerHTML = data.name3
 }
 
 fetcher()
-setInterval(fetcher, 3000)
+setInterval(fetcher, 500)
