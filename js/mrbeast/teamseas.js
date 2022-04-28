@@ -11,12 +11,7 @@ let config = {
     "odometerSpeed": localStorage.getItem('odometerSpeed') || "1.5",
     "graphColor": localStorage.getItem('graphColor') || "#FFFFFF",
     "graphLength": localStorage.getItem('graphLength') || "1500",
-    "graphType": localStorage.getItem('graphType') || "line",
-    "bookmark1": localStorage.getItem('bookmark1') || "YouTube/user",
-    "bookmark2": localStorage.getItem('bookmark2') || "YouTube/user-est",
-    "bookmark3": localStorage.getItem('bookmark3') || "StoryFire/user",
-    "bookmark4": localStorage.getItem('bookmark4') || "Discord/server",
-    "bookmark5": localStorage.getItem('bookmark5') || "Twitch/user",
+    "graphType": localStorage.getItem('graphType') || "line"
 }
 let url = new URL(window.location.href);
 let last = []
