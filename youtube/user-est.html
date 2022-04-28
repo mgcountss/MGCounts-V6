@@ -2,9 +2,10 @@
 <script src=".././js/odometer.js"></script>
 <link rel="stylesheet" href=".././css/odometer.css">
 <link rel="stylesheet" href=".././css/bootstrap.css">
-<meta charset="utf-8"/>
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="MGCounts has YouTube, Twitch, StoryFire, Roblox, Global Clicker, Gab, Reddit, Fake, Gab, Discord, TeamTrees, and TeamSeas live counts.">
+<meta name="description"
+    content="MGCounts has YouTube, Twitch, StoryFire, Roblox, Global Clicker, Gab, Reddit, Fake, Gab, Discord, TeamTrees, and TeamSeas live counts.">
 <meta name="image" content="//mgcounts.com/favicon.ico">
 <meta property="og:image" content="">
 <meta property="og:type" content="">
@@ -21,18 +22,12 @@
             <li><a class="btn" style="color: White;" href="/faq">FAQ</a></li>
             <li><a class="btn" style="color: White;" href="/contact">Contact</a></li>
             <li><a class="btn" style="color: White;" href="/developers">Developers</a></li>
-<li><a class="btn" style="color: White;" href="/bookmarks">Bookmarks</a></li>
-            <button style="margin-top: 5px;"><a class="btn" style="color: black;" type="button" class="btn btn-light btn-block" data-toggle="modal"
-                    data-target="#exampleModalCenter">Change Channel</a></button>
+
+            <button style="margin-top: 5px;"><a class="btn" style="color: black;" type="button"
+                    class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter">Change
+                    Channel</a></button>
         </ul>
-        <ul class="nav navbar-nav">
-            <li><a href="/" class="bookmark" id="bookmark1">Bookmark 1</a></li>
-            <li><a href="/" class="bookmark" id="bookmark2">Bookmark 2</a></li>
-            <li><a href="/" class="bookmark" id="bookmark3">Bookmark 3</a></li>
-            <li><a href="/" class="bookmark" id="bookmark4">Bookmark 4</a></li>
-            <li><a href="/" class="bookmark" id="bookmark5">Bookmark 5</a></li>
-            <li><button onclick="set()" class="bookmarkM">Set Bookmark</button></li>
-        </ul>
+
     </nav>
 </div>
 <center>
@@ -40,10 +35,10 @@
 </center>
 <center>
     <div id="mainCount" class="counter card-wide">
-        <div class="banner" id="banner2">
+        <div class="banner banner2" id="banner2">
             <img id="banner">
+            <img class="img" id="img" src=".././images/Old-YT.png">
         </div>
-        <img class="img" id="img" src=".././images/Old-YT.png">
         <h2 id="name">Loading</h2>
         <h1 id="count" class="odometer">0</h1>
         <h2 class="f" id="f"></h2>
@@ -59,6 +54,9 @@
     <div class="other">
         <input id="embed" readonly value="Loading" onclick="embed()">
         <br>
+        <br>
+        <br>
+        <button id="set" onclick="settings()">Settings</button>
         <br>
         <br>
         <div class="settings" id="settings">
@@ -170,6 +168,7 @@
 <script src=".././js/jquery.js"></script>
 <script src=".././js/bootstrap.js"></script>
 <script src=".././js/highstock.js"></script>
+<script src=".././js/settings.js"></script>
 <script src=".././js/youtube/user-est.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177075755-1"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js"></script>
