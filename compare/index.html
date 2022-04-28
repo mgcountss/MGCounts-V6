@@ -23,12 +23,12 @@
     <div class="select" id="select"></div>
 </center>
 <center>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); width: 95vw;">
         <div id="mainCount" class="counter card-wide">
             <div class="banner" id="banner3">
                 <img id="banner">
+                <img class="img" id="img" src=".././images/Old-YT.png">
             </div>
-            <img class="img" id="img" src=".././images/Old-YT.png">
             <h2 id="name">Loading</h2>
             <h1 id="count" class="odometer">0</h1>
             <h2 class="f" id="f"></h2>
@@ -36,12 +36,12 @@
                 <div class="chart card-mid" id="chart"></div>
             </center>
         </div>
-        
+
         <div id="mainCount2" class="counter card-wide">
             <div class="banner" id="banner3">
                 <img id="banner2">
+                <img class="img" id="img2" src=".././images/Old-YT.png">
             </div>
-            <img class="img" id="img2" src=".././images/Old-YT.png">
             <h2 id="name2">Loading</h2>
             <h1 id="count2" class="odometer">0</h1>
             <h2 class="f" id="ff"></h2>
@@ -57,17 +57,12 @@
         <h2>Difference:</h2>
         <h1 class="odometer" id="difference">0</h1>
     </div>
-    <br>
-    <br>
     <div class="other">
-        <br>
-        <br>
         <br>
         <button id="set" onclick="settings()">Settings</button>
         <br>
-        <br>
-          <div class="settings" id="settings">
-  <div>
+        <div class="settings" id="settings">
+            <div>
                 <h2>Background Color</h2>
                 <input id="BColor" type="color" value="" onchange="load3()">
             </div>

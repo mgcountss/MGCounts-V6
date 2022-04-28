@@ -3,14 +3,14 @@ var url2 = ""
 document.getElementById("select1").addEventListener('change', function () {
     if (document.getElementById('select1').value == 'mrbeast/teamseas') {
         document.getElementById('search1').remove()
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'mrbeast/teamtrees') {
         document.getElementById('search1').remove()
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'discord/server') {
@@ -22,8 +22,8 @@ document.getElementById("select1").addEventListener('change', function () {
             }
         }
         document.getElementById('search1').placeholder = "Server Invite ID"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'roblox/user') {
@@ -35,8 +35,8 @@ document.getElementById("select1").addEventListener('change', function () {
             }
         }
         document.getElementById('search1').placeholder = "User ID"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'roblox/games') {
@@ -48,8 +48,8 @@ document.getElementById("select1").addEventListener('change', function () {
             }
         }
         document.getElementById('select1').placeholder = "User ID"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'roblox/groups') {
@@ -61,8 +61,8 @@ document.getElementById("select1").addEventListener('change', function () {
             }
         }
         document.getElementById('search1').placeholder = "Group ID"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'gab/user') {
@@ -72,8 +72,8 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "Username"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'gab/post') {
@@ -83,8 +83,8 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "Post ID"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'globalClicker/v') {
@@ -94,8 +94,8 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "V: "
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'storyfire/user') {
@@ -105,8 +105,8 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "User ID"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'twitch/user') {
@@ -116,8 +116,8 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "Username"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'twitch/streams') {
@@ -127,7 +127,8 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "Streamer Username"
-        document.getElementById('img1').style.width = "200px"
+        document.getElementById('img1').style.width = "15vw"
+        document.getElementById('img1').style.height = "10vw"
         document.getElementById('img1').style.borderRadius = "20px"
         document.getElementById('inputa').remove()
     }
@@ -138,8 +139,8 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "R/ "
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'youtubeapi/user') {
@@ -149,8 +150,8 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "Search"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'youtube/user-est') {
@@ -160,8 +161,8 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "Search"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'youtube/videos') {
@@ -171,7 +172,8 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "Search"
-        document.getElementById('img1').style.width = "200px"
+        document.getElementById('img1').style.width = "15vw"
+        document.getElementById('img1').style.height = "10vw"
         document.getElementById('img1').style.borderRadius = "20px"
         document.getElementById('inputa').remove()
     }
@@ -182,14 +184,15 @@ document.getElementById("select1").addEventListener('change', function () {
             document.getElementById('query1').append(a)
         }
         document.getElementById('search1').placeholder = "Video ID"
-        document.getElementById('img1').style.width = "200px"
+        document.getElementById('img1').style.width = "15vw"
+        document.getElementById('img1').style.height = "10vw"
         document.getElementById('img1').style.borderRadius = "20px"
         document.getElementById('inputa').remove()
     }
     if (document.getElementById('select1').value == 'discord/mee6') {
         document.getElementById('search1').placeholder = "Server ID"
-        document.getElementById('img1').style.width = "100px"
-        document.getElementById('img1').style.borderRadius = "100px"
+        document.getElementById('img1').style.width = "10vw"
+        document.getElementById('img1').style.borderRadius = "10vw"
         var b = document.createElement('INPUT')
         b.id = "inputa"
         b.placeholder = "Username"
@@ -199,14 +202,14 @@ document.getElementById("select1").addEventListener('change', function () {
 document.getElementById("select2").addEventListener('change', function () {
     if (document.getElementById('select2').value == 'mrbeast/teamseas') {
         document.getElementById('search2').remove()
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'mrbeast/teamtrees') {
         document.getElementById('search2').remove()
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'discord/server') {
@@ -218,8 +221,8 @@ document.getElementById("select2").addEventListener('change', function () {
             }
         }
         document.getElementById('search2').placeholder = "Server Invite ID"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'roblox/user') {
@@ -231,8 +234,8 @@ document.getElementById("select2").addEventListener('change', function () {
             }
         }
         document.getElementById('search2').placeholder = "User ID"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'roblox/games') {
@@ -244,8 +247,8 @@ document.getElementById("select2").addEventListener('change', function () {
             }
         }
         document.getElementById('search2').placeholder = "User ID"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'roblox/groups') {
@@ -257,8 +260,8 @@ document.getElementById("select2").addEventListener('change', function () {
             }
         }
         document.getElementById('search2').placeholder = "Group ID"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'gab/user') {
@@ -268,8 +271,8 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "Username"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'gab/post') {
@@ -279,8 +282,8 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "Post ID"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'globalClicker/v') {
@@ -290,8 +293,8 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "V: "
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'storyfire/user') {
@@ -301,8 +304,8 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "User ID"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'twitch/user') {
@@ -312,8 +315,8 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "Username"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'twitch/streams') {
@@ -323,8 +326,9 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "Streamer Username"
-        document.getElementById('img2').style.width = "200px"
-        document.getElementById('img2').style.borderRadius = "20px"
+        document.getElementById('img1').style.width = "15vw"
+        document.getElementById('img1').style.height = "10vw"
+        document.getElementById('img1').style.borderRadius = "20px"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'reddit/subreddit') {
@@ -334,8 +338,8 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "R/ "
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'youtubeapi/user') {
@@ -345,8 +349,8 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "Search"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'youtube/user-est') {
@@ -356,8 +360,8 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "Search"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'youtube/videos') {
@@ -367,8 +371,9 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "Search"
-        document.getElementById('img2').style.width = "200px"
-        document.getElementById('img2').style.borderRadius = "20px"
+        document.getElementById('img1').style.width = "15vw"
+        document.getElementById('img1').style.height = "10vw"
+        document.getElementById('img1').style.borderRadius = "20px"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'storyfire/videos') {
@@ -378,14 +383,15 @@ document.getElementById("select2").addEventListener('change', function () {
             document.getElementById('query2').append(a)
         }
         document.getElementById('search2').placeholder = "Video ID"
-        document.getElementById('img2').style.width = "200px"
-        document.getElementById('img2').style.borderRadius = "20px"
+        document.getElementById('img1').style.width = "15vw"
+        document.getElementById('img1').style.height = "10vw"
+        document.getElementById('img1').style.borderRadius = "20px"
         document.getElementById('inputb').remove()
     }
     if (document.getElementById('select2').value == 'discord/mee6') {
         document.getElementById('search2').placeholder = "Server ID"
-        document.getElementById('img2').style.width = "100px"
-        document.getElementById('img2').style.borderRadius = "100px"
+        document.getElementById('img2').style.width = "10vw"
+        document.getElementById('img2').style.borderRadius = "10vw"
         var b = document.createElement('INPUT')
         b.id = "inputb"
         b.placeholder = "Username"
