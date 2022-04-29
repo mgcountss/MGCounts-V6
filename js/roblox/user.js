@@ -44,7 +44,7 @@ function load() {
         document.getElementById('sideCounters').appendChild(a)
     }
     load2()
-    bookmarks()
+    
 }
 
 function embed() {
@@ -288,7 +288,7 @@ function set() {
         window.localStorage.setItem('Bookmark 5', document.URL)
     }
   select.innerHTML = ""
-  bookmarks()`);
+  `);
     for (let i = 0; i < array.length; i++) {
         let option = document.createElement("option");
         option.value = array[i];
@@ -297,11 +297,7 @@ function set() {
     }
 }
 
-function bookmarks() {
-    for (let q = 1; q < 6; q++) {
-     document.getElementById('bookmark'+q+'').href = localStorage.getItem('Bookmark '+q+'') || "https://mgcounts.com/bookmarks"
-    }
-}
+
 
 function search() {
     fetch('https://backend.mgcounts.com/roblox/users/search/' + document.getElementById('search').value + '')

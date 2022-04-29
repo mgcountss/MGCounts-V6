@@ -17,7 +17,7 @@ function load() {
     document.getElementById('mainCount').style.backgroundColor = config.backgroundCounter
     document.getElementById('mainCount2').style.backgroundColor = config.backgroundCounter
     load2()
-    bookmarks()
+    
 }
 
 function embed() {
@@ -364,7 +364,7 @@ function set() {
         window.localStorage.setItem('Bookmark 5', document.URL)
     }
   select.innerHTML = ""
-  bookmarks()`);
+  `);
     for (let i = 0; i < array.length; i++) {
         let option = document.createElement("option");
         option.value = array[i];
