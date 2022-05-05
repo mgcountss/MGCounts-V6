@@ -315,4 +315,4 @@ function search() {
 }
 
 fetcher()
-setInterval(fetcher, 3000)
+setInterval(fetcher, 2000)
