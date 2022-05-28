@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/odometer.css">
+    <script src="./js/odometer.js"></script>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .odometer {
+            font-size: calc(0.5em + 3.5vw);
+            font-weight: bold;
+            font-family: 'Odometer One', sans-serif;
+            color: #333;
+            margin-top: 0px;
+        }
+
+        .main {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <h1 class="name">Total</h1>
+            <h1 class="odometer1 odometer"></h1>
+        </div>
+        <div>
+            <h1 class="name">Public</h1>
+            <h1 class="odometer2 odometer"></h1>
+        </div>
+        <div>
+            <h1 class="name">Unlisted</h1>
+            <h1 class="odometer3 odometer"></h1>
+        </div>
+        <div>
+            <h1 class="name">Private</h1>
+            <h1 class="odometer4 odometer"></h1>
+        </div>
+        <div>
+            <h1 class="name">Shorts</h1>
+            <h1 class="odometer5 odometer"></h1>
+        </div>
+    </div>
+    <center>
+        <hr>
+        <h1>How does it work?</h1>
+        <h1>We use the math from <a href="https://www.youtube.com/watch?v=2sWFJQFpghw">this video</a> to get an <span
+                style="font-weight: bolder;">estimated</span> count of these.</h1>
+        <h1>For YT Shorts there is a hastag for it so we just counted those and added a few numbers.</h1>
+        <h1>For Public, Unlisted, and Private we just divided the total by whatever looked right.</h1>
+    </center>
+    <script>
+        let hoursUploadedPerMinute = 500;
+        let minutesinHoursUploadedPerMinute = hoursUploadedPerMinute * 60;
+        let videosPerMinute = minutesinHoursUploadedPerMinute / 8;
+        let minutesin1Day = 1440;
+        var days_Since_Feb_14_2005 = (new Date().getTime() - new Date("02/14/2005").getTime()) / (1000 * 3600 * 24);
+        let rate = minutesin1Day * videosPerMinute;
+        let total = rate * days_Since_Feb_14_2005;
+        let data = {
+            "total": rate * days_Since_Feb_14_2005,
+            "public": total / 2.3,
+            "unlisted": total / 22.3,
+            "private": total / 14.3,
+            "shorts": (total / 2) / 60
+        }
+        function fetcher() {
+            document.querySelector('.odometer1').innerHTML = Math.floor(data.total);
+            document.querySelector('.odometer2').innerHTML = Math.floor(data.public);
+            document.querySelector('.odometer3').innerHTML = Math.floor(data.unlisted);
+            document.querySelector('.odometer4').innerHTML = Math.floor(data.private);
+            document.querySelector('.odometer5').innerHTML = Math.floor(data.shorts);
+        };
+        fetcher();
+        setInterval(fetcher, 1500);
+
+        function update() {
+            total += rate / 24 / 60 / 60;
+            data.total = total;
+            data.public = total / 2.3;
+            data.unlisted = total / 22.3;
+            data.private = total / 14.3;
+            data.shorts = (total / 2) / 60;
+        }
+
+        update();
+        setInterval(update, 1000);
+    </script>
+</body>
+
+</html>
