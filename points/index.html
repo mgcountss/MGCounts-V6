@@ -1,0 +1,178 @@
+<link rel="stylesheet" href=".././css/base.css">
+<script src=".././js/odometer.js"></script>
+<link rel="stylesheet" href=".././css/odometer.css">
+<link rel="stylesheet" href=".././css/bootstrap.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description"
+    content="MGCounts has YouTube, Twitch, StoryFire, Roblox, Global Clicker, Gab, Reddit, Fake, Gab, Discord, TeamTrees, and TeamSeas live counts.">
+<meta name="image" content="//mgcounts.com/favicon.ico">
+<meta property="og:image" content="">
+<meta property="og:type" content="">
+<link rel="shortcut icon" href="../favicon.ico">
+
+<head>
+    <style></style>
+</head>
+<div id="header">
+    <nav class="navbar navbar-inverse">
+        <ul class="nav navbar-nav">
+            <li><a class="btn" style="color: White;" href="https://mgcounts.com">MGCounts</a></li>
+            <li><a class="btn" style="color: White;" href="https://mixerno.space/">Mixerno.space (Partner)</a></li>
+            <li><a class="btn" style="color: White;" href="/faq">FAQ</a></li>
+            <li><a class="btn" style="color: White;" href="/contact">Contact</a></li>
+            <li><a class="btn" style="color: White;" href="/developers">Developers</a></li>
+            <button style="margin-top: 5px;"><a class="btn" style="color: black;" type="button"
+                    class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter">Change
+                    Channel</a></button>
+        </ul>
+
+    </nav>
+</div>
+<center>
+    <div class="select" id="select"></div>
+</center>
+<center>
+    <div id="mainCount" class="counter card-wide">
+        <div class="banner banner2" id="banner2">
+            <img id="banner">
+            <img class="img" id="img" src=".././images/Old-YT.png">
+        </div>
+        <h2 id="name">Loading</h2>
+        <h1 id="count" class="odometer">0</h1>
+        <h2 class="f" id="f"></h2>
+        <center>
+            <div class="chart card-mid" id="chart"></div>
+        </center>
+</center>
+
+<center>
+    <div class="sideCounters" id="sideCounters"></div>
+    <br>
+    <br>
+    <div class="other">
+        <input id="embed" readonly value="Loading" onclick="embed()">
+        <br>
+        <br>
+        <br>
+        <button id="set" onclick="settings()">Settings</button>
+        <br>
+        <br>
+        <div class="settings" id="settings">
+            <div>
+                <h2>Background Color</h2>
+                <input id="BColor" type="color" value="" onchange="load3()">
+            </div>
+            <div>
+                <h2>Counter Background Color</h2>
+                <input id="CounterBColor" type="color" value="" onchange="load3()">
+            </div>
+            <div>
+                <h2>Main Counter Color</h2>
+                <input id="MainColor" type="color" value="" onchange="load3()">
+            </div>
+            <div>
+                <h2>Side Counters Color</h2>
+                <input id="SideColor" type="color" value="" onchange="load3()">
+            </div>
+            <div>
+                <h2>Odometer Up Color</h2>
+                <input id="UpColor" type="color" value="" onchange="load3()">
+            </div>
+            <div>
+                <h2>Odometer Down Color</h2>
+                <input id="DownColor" type="color" value="" onchange="load3()">
+            </div>
+            <div>
+                <h2>Odometer Speed (seconds)</h2>
+                <input id="speed" type="number" value="" onchange="load3()">
+            </div>
+            <div>
+                <h2>Graph Color</h2>
+                <input id="graphColor" type="color" value="" onchange="load3()">
+            </div>
+            <div>
+                <h2>Graph Type</h2>
+                <input id="graphType" type="text" value="" placeholder="line,spline,area,splinearea" onchange="load3()">
+            </div>
+            <div>
+                <h2>Graph Max Length</h2>
+                <input id="graphLength" type="text" value="" placeholder="In update points." onchange="load3()">
+            </div>
+            <div>
+                <h2>Reset Settings</h2>
+                <button onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+</center>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" style="background-color: #292b2c;">
+        <div class="modal-header">
+            <div class="modal-body">
+            </div>
+            <center>
+                <h1 style="color: white; margin-top: -25px;">Change Channel</h1>
+                <br>
+                <h5 style="color: white;">Channel ID</h5>
+                <form id="FormThing" onsubmit="updatePageHmm()">
+                    <input type="text" placeholder="Channel ID" name="id" id="searchHmm">
+                    <input type="submit" value="Count!">
+                </form>
+                <br>
+                <br>
+                <br>
+                <h5 style="color: white;">Search</h5>
+                <input type="text" placeholder="Search For Channel" id="search">
+                <button onclick="search()">Search</button>
+                <br>
+                <h5 style="color: white;">Results:</h5>
+                <br>
+                <br>
+                <div style="justify-content: space-between; text-align: center; display: flex; flex-direction: row;">
+                    <div id="channel1"
+                        onclick="location.href = `https://mgcounts.com/points?id=${document.getElementById('name1').title}`;"
+                        style="cursor: pointer;">
+                        <img id="img1" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://mgcounts.com/assets/img/Old-YT.png"
+                            style="width: 80px;height: 80px; border-radius: 50%;"><br>
+                        <span style="color: white;" id="name1" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
+                    </div>
+                    <div id="channel2"
+                        onclick="location.href = `https://mgcounts.com/points?id=${document.getElementById('name2').title}`;"
+                        style="cursor: pointer;">
+                        <img id="img2" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://mgcounts.com/assets/img/Old-YT.png"
+                            style="width: 80px;height: 80px; border-radius: 50%;"><br>
+                        <span style="color: white;" id="name2" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
+                    </div>
+                    <div id="channel3"
+                        onclick="location.href = `https://mgcounts.com/points?id=${document.getElementById('name3').title}`;"
+                        style="cursor: pointer;">
+                        <img id="img3" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://mgcounts.com/assets/img/Old-YT.png"
+                            style="width: 80px;height: 80px; border-radius: 50%;"><br>
+                        <span style="color: white;" id="name3" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
+                    </div>
+            </center>
+        </div>
+        <br>
+    </div>
+</div>
+<br>
+<div id="footer">
+    <h2>© 2022 MGCounts.com</h2>
+</div>
+<script src=".././js/jquery.js"></script>
+<script src=".././js/bootstrap.js"></script>
+<script src=".././js/highstock.js"></script>
+<script src=".././js/settings.js"></script>
+<script src=".././js/points/points.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177075755-1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js"></script>
+<script>
+    load()
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-177075755-1');
+    var socket = io('https://backend.mgcounts.com?&urlPath=' + document.URL + '', { transports: ['websocket'] });
+</script>
