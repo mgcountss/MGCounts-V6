@@ -1,0 +1,52 @@
+<link rel="stylesheet" href=".././css/base.css">
+<script src=".././js/odometer.js"></script>
+<link rel="stylesheet" href=".././css/odometer.css">
+<link rel="stylesheet" href=".././css/bootstrap.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description"
+    content="MGCounts has YouTube, Twitch, StoryFire, Roblox, Global Clicker, Gab, Reddit, Fake, Gab, Discord, TeamTrees, and TeamSeas live counts.">
+<meta name="image" content="//mgcounts.com/favicon.ico">
+<meta property="og:image" content="">
+<meta property="og:type" content="">
+<link rel="shortcut icon" href="../favicon.ico">
+
+<head>
+    <style></style>
+</head>
+<div id="header">
+    <nav class="navbar navbar-inverse">
+        <ul class="nav navbar-nav">
+            <li><a class="btn" style="color: White;" href="https://mgcounts.com">MGCounts</a></li>
+            <li><a class="btn" style="color: White;" href="https://mixerno.space/">Mixerno.space (Partner)</a></li>
+            <li><a class="btn" style="color: White;" href="/faq">FAQ</a></li>
+            <li><a class="btn" style="color: White;" href="/contact">Contact</a></li>
+            <li><a class="btn" style="color: White;" href="/developers">Developers</a></li>
+        </ul>
+
+    </nav>
+</div>
+<center>
+    <div class="select" id="select"></div>
+</center>
+<center>
+    <div id="mainCount" class="counter card-wide">
+
+    </div>
+</center>
+<br>
+<div id="footer">
+    <h2>© 2022 MGCounts.com</h2>
+</div>
+<script src=".././js/jquery.js"></script>
+<script src=".././js/bootstrap.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177075755-1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.js"></script>
+<script>
+    load()
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-177075755-1');
+    var socket = io('https://backend.mgcounts.com?&urlPath=' + document.URL + '', { transports: ['websocket'] });
+</script>
