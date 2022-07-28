@@ -2,9 +2,10 @@
 <script src=".././js/odometer.js"></script>
 <link rel="stylesheet" href=".././css/odometer.css">
 <link rel="stylesheet" href=".././css/bootstrap.css">
-<meta charset="utf-8"/>
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="MGCounts has YouTube, Twitch, StoryFire, Roblox, Global Clicker, Gab, Reddit, Fake, Gab, Discord, TeamTrees, and TeamSeas live counts.">
+<meta name="description"
+    content="MGCounts has YouTube, Twitch, StoryFire, Roblox, Global Clicker, Gab, Reddit, Fake, Gab, Discord, TeamTrees, and TeamSeas live counts.">
 <meta name="image" content="//mgcounts.com/favicon.ico">
 <meta property="og:image" content="">
 <meta property="og:type" content="">
@@ -20,13 +21,10 @@
             <li><a class="btn" style="color: White;" href="https://mixerno.space/">Mixerno.space (Partner)</a></li>
             <li><a class="btn" style="color: White;" href="/faq">FAQ</a></li>
             <li><a class="btn" style="color: White;" href="/contact">Contact</a></li>
-            <li><a class="btn" style="color: White;" href="/developers">Developers</a></li>
-            
             <button style="margin-top: 5px;"><a class="btn" style="color: black;" type="button"
                     class="btn btn-light btn-block" data-toggle="modal" data-target="#exampleModalCenter">Change
                     Game</a></button>
         </ul>
-
     </nav>
 </div>
 <center>
@@ -36,9 +34,9 @@
     <div id="mainCount" class="counter card-wide">
         <div class="banner banner2" id="banner2">
             <img id="banner">
+            <img class="img" id="img" style="border-radius: 15px; width: 200px;" src=".././images/Old-YT.png">
         </div>
-        <img class="img" id="img" style="border-radius: 15%;" src=".././images/Old-YT.png">
-        <h2 id="name">Loading</h2>
+        <h2 id="name" style="font-size: 2.5vw">Loading</h2>
         <h1 id="count" class="odometer">0</h1>
         <h2 class="f" id="f"></h2>
         <center>
@@ -47,7 +45,7 @@
 </center>
 
 <center>
-    <div class="sideCounters" id="sideCounters"></div>
+    <div class="sideCounters" id="sideCounters" style="width: 90%"></div>
     <br>
     <br>
     <div class="other">
@@ -58,8 +56,8 @@
         <button id="set" onclick="settings()">Settings</button>
         <br>
         <br>
-          <div class="settings" id="settings">
-  <div>
+        <div class="settings" id="settings">
+            <div>
                 <h2>Background Color</h2>
                 <input id="BColor" type="color" value="" onchange="load3()">
             </div>
@@ -136,24 +134,21 @@
                     <div id="channel1"
                         onclick="location.href = `https://mgcounts.com/roblox/games?id=${document.getElementById('name1').title}`;"
                         style="cursor: pointer;">
-                        <img id="img1" title="UCSgk1g0AZi9_759yfz-iIHg"
-                            src="https://mgcounts.com/assets/img/Old-YT.png"
+                        <img id="img1" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://mgcounts.com/assets/img/Old-YT.png"
                             style="width: 80px;height: 80px; border-radius: 50%;"><br>
                         <span style="color: white;" id="name1" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
                     </div>
                     <div id="channel2"
                         onclick="location.href = `https://mgcounts.com/roblox/games?id=${document.getElementById('name2').title}`;"
                         style="cursor: pointer;">
-                        <img id="img2" title="UCSgk1g0AZi9_759yfz-iIHg"
-                            src="https://mgcounts.com/assets/img/Old-YT.png"
+                        <img id="img2" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://mgcounts.com/assets/img/Old-YT.png"
                             style="width: 80px;height: 80px; border-radius: 50%;"><br>
                         <span style="color: white;" id="name2" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
                     </div>
                     <div id="channel3"
                         onclick="location.href = `https://mgcounts.com/roblox/games?id=${document.getElementById('name3').title}`;"
                         style="cursor: pointer;">
-                        <img id="img3" title="UCSgk1g0AZi9_759yfz-iIHg"
-                            src="https://mgcounts.com/assets/img/Old-YT.png"
+                        <img id="img3" title="UCSgk1g0AZi9_759yfz-iIHg" src="https://mgcounts.com/assets/img/Old-YT.png"
                             style="width: 80px;height: 80px; border-radius: 50%;"><br>
                         <span style="color: white;" id="name3" title="UCSgk1g0AZi9_759yfz-iIHg">LOADING</span>
                     </div>
@@ -162,7 +157,6 @@
         <br>
     </div>
 </div>
-
 <br>
 <div id="footer">
     <h2>© 2022 MGCounts.com</h2>

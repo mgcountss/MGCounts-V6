@@ -64,12 +64,21 @@
         var days_Since_Feb_14_2005 = (new Date().getTime() - new Date("02/14/2005").getTime()) / (1000 * 3600 * 24);
         let rate = minutesin1Day * videosPerMinute;
         let total = rate * days_Since_Feb_14_2005;
+        let newTotal = total
+        newTotal = newTotal / 2.3
+        let public = newTotal
+        newTotal = newTotal / 22.3
+        let unlisted = newTotal
+        newTotal = newTotal / 14.3
+        let private = newTotal
+        newTotal = newTotal
+        let shorts = newTotal
         let data = {
             "total": rate * days_Since_Feb_14_2005,
-            "public": total / 2.3,
-            "unlisted": total / 22.3,
-            "private": total / 14.3,
-            "shorts": (total / 2) / 60
+            "public": public,
+            "unlisted": unlisted,
+            "private": private,
+            "shorts": shorts
         }
         function fetcher() {
             document.querySelector('.odometer1').innerHTML = Math.floor(data.total);
