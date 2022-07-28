@@ -45,12 +45,11 @@ body {
   text-align: center;
   height: 20vh;
   width: 100%;
-  z-index: 9999;
-  margin-top: -20vh;
+  margin-top: 0px;
 }
 
 #count {
-  font-size: 5vw;
+  font-size: calc(6vh + 1vw);
   margin-top: -5px;
   z-index: 1001;
 }

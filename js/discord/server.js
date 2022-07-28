@@ -21,7 +21,7 @@ if (url.searchParams.get('id')) {
     id = params.get("id");
 }
 function load() {
-    document.getElementById('embed').value = "https://mgcounts.com/embeds/discord/server?id="+id+""
+    document.getElementById('embed').value = "https://mgcounts.com/embeds/discord/server?id=" + id + ""
     document.title = config.name
     document.body.style.backgroundColor = config.background
     document.getElementById('mainCount').style.backgroundColor = config.backgroundCounter
@@ -43,7 +43,7 @@ function load() {
         document.getElementById('sideCounters').appendChild(a)
     }
     load2()
-    
+
 }
 
 function embed() {
@@ -59,25 +59,27 @@ function fetcher() {
     fetch('https://backend.mgcounts.com/discord/server/' + id + '')
         .then(response => response.json())
         .then(data => {
-            document.getElementById('count').innerHTML = data.main
-            lastest = parseFloat(data.main)
-            document.getElementById('name').innerHTML = data.name
-            document.getElementById('img').src = data.image
-            if (chart.series[0].points.length == config.graphLength) chart.series[0].data[0].remove();
-            chart.series[0].addPoint([Date.now(), Math.floor(data.main)])
-            if (data.banner == null) {
-                document.getElementById('banner').src = data.image
-            } else {
-                document.getElementById('banner').src = data.banner
-            }
-            if (data.main < 10) return 10; let x1 = Math.floor(Math.log10(data.main)); let x2 = Math.ceil(data.main / 10 ** x1); let x3 = x2 * 10 ** x1; let goal = x3 - data.main;
-            document.getElementById('count_1').innerHTML = goal
-            document.getElementById('name_1').innerHTML = "Goal"
-            if (config.sideCounts > 1) {
-                for (let q = 1; q < config.sideCounts; q++) {
-                    let e = q + 1
-                    document.getElementById('count_' + e + '').innerHTML = data.sideCounts[q - 1].count
-                    document.getElementById('name_' + e + '').innerHTML = data.sideCounts[q - 1].name
+            if (data && data.main) {
+                document.getElementById('count').innerHTML = data.main
+                lastest = parseFloat(data.main)
+                document.getElementById('name').innerHTML = data.name
+                document.getElementById('img').src = data.image
+                if (chart.series[0].points.length == config.graphLength) chart.series[0].data[0].remove();
+                chart.series[0].addPoint([Date.now(), Math.floor(data.main)])
+                if (data.banner == null) {
+                    document.getElementById('banner').src = data.image
+                } else {
+                    document.getElementById('banner').src = data.banner
+                }
+                if (data.main < 10) return 10; let x1 = Math.floor(Math.log10(data.main)); let x2 = Math.ceil(data.main / 10 ** x1); let x3 = x2 * 10 ** x1; let goal = x3 - data.main;
+                document.getElementById('count_1').innerHTML = goal
+                document.getElementById('name_1').innerHTML = "Goal"
+                if (config.sideCounts > 1) {
+                    for (let q = 1; q < config.sideCounts; q++) {
+                        let e = q + 1
+                        document.getElementById('count_' + e + '').innerHTML = data.sideCounts[q - 1].count
+                        document.getElementById('name_' + e + '').innerHTML = data.sideCounts[q - 1].name
+                    }
                 }
             }
         });
